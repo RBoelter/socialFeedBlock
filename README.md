@@ -59,6 +59,7 @@ Respected: the text of a Mastodon post behind a content warning is not shown, on
 - Mastodon allows 300 requests per five minutes per address. With the default refresh interval that is far from being reached.
 - The block shows what other people posted. Prefer your journal's own account over a hashtag, and keep an eye on it.
 - Your server contacts the social network, and the request comes from your server's address. Take that into account in your privacy notice if you describe which services your site talks to.
+- Your server also contacts the Mastodon host that is entered in the settings, which only administrators and journal managers can change. The plugin refuses IP addresses, `localhost`, paths and ports and only talks HTTPS, but a name that resolves to an internal address is not blocked. Do not give the settings to people you do not trust.
 
 ## Troubleshooting
 
