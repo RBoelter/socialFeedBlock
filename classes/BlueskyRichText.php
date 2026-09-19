@@ -38,7 +38,8 @@ final class BlueskyRichText
                 continue;
             }
 
-            $html .= self::escape($before) . '<a href="' . self::escape($url) . '"' . self::LINK_ATTRIBUTES . '>' . self::escape($label) . '</a>';
+            $link = '<a href="' . self::escape($url) . '"' . self::LINK_ATTRIBUTES . '>' . self::escape($label) . '</a>';
+            $html .= self::escape($before) . $link;
             $cursor = $end;
         }
 

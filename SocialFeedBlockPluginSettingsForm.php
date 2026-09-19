@@ -18,11 +18,11 @@ class SocialFeedBlockPluginSettingsForm extends Form
 {
     /** What a block that was never configured starts with. */
     private const DEFAULTS = [
-        'network' => FeedConfig::NETWORK_MASTODON,
-        'mastodonSource' => FeedConfig::SOURCE_ACCOUNT,
-        'blueskySource' => FeedConfig::SOURCE_AUTHOR,
-        'postCount' => FeedConfig::DEFAULT_POSTS,
-        'cacheTtl' => FeedConfig::DEFAULT_CACHE_MINUTES,
+        Setting::Network->value => FeedConfig::NETWORK_MASTODON,
+        Setting::MastodonSource->value => FeedConfig::SOURCE_ACCOUNT,
+        Setting::BlueskySource->value => FeedConfig::SOURCE_AUTHOR,
+        Setting::PostCount->value => FeedConfig::DEFAULT_POSTS,
+        Setting::CacheTtl->value => FeedConfig::DEFAULT_CACHE_MINUTES,
     ];
 
     public function __construct(private SocialFeedBlockPlugin $plugin)
@@ -67,8 +67,6 @@ class SocialFeedBlockPluginSettingsForm extends Form
 
     public function fetch($request, $template = null, $display = false)
     {
-        $range = static fn (int $min, int $max): array => ['min' => $min, 'max' => $max];
-
         TemplateManager::getManager($request)->assign([
             'pluginName' => $this->plugin->getName(),
             'networkOptions' => [
@@ -83,11 +81,25 @@ class SocialFeedBlockPluginSettingsForm extends Form
                 FeedConfig::SOURCE_AUTHOR => 'plugins.blocks.socialFeed.source.author',
                 FeedConfig::SOURCE_FEED => 'plugins.blocks.socialFeed.source.feed',
             ],
-            'postCountHelp' => __('plugins.blocks.socialFeed.settings.postCount.desc', $range(FeedConfig::MIN_POSTS, FeedConfig::MAX_POSTS)),
-            'cacheTtlHelp' => __('plugins.blocks.socialFeed.settings.cacheTtl.desc', $range(FeedConfig::MIN_CACHE_MINUTES, FeedConfig::MAX_CACHE_MINUTES)),
+            'postCountHelp' => $this->rangeHelp(
+                'plugins.blocks.socialFeed.settings.postCount.desc',
+                FeedConfig::MIN_POSTS,
+                FeedConfig::MAX_POSTS
+            ),
+            'cacheTtlHelp' => $this->rangeHelp(
+                'plugins.blocks.socialFeed.settings.cacheTtl.desc',
+                FeedConfig::MIN_CACHE_MINUTES,
+                FeedConfig::MAX_CACHE_MINUTES
+            ),
         ]);
 
         return parent::fetch($request, $template, $display);
+    }
+
+    /** The help text of a number field, with the range it accepts filled in. */
+    private function rangeHelp(string $localeKey, int $min, int $max): string
+    {
+        return __($localeKey, ['min' => $min, 'max' => $max]);
     }
 
     /**

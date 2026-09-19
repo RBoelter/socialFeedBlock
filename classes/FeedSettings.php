@@ -55,25 +55,18 @@ final class FeedSettings
     {
         $errors = [];
 
-        $postCount = self::parseInt(
-            $raw[Setting::PostCount->value] ?? '',
-            FeedConfig::MIN_POSTS,
-            FeedConfig::MAX_POSTS,
-            FeedConfig::DEFAULT_POSTS
+        $postCount = self::parseNumber(
+            $raw,
+            Setting::PostCount,
+            [FeedConfig::MIN_POSTS, FeedConfig::MAX_POSTS, FeedConfig::DEFAULT_POSTS],
+            $errors
         );
-        if ($postCount === null) {
-            $errors[Setting::PostCount->value] = self::rangeError(FeedConfig::MIN_POSTS, FeedConfig::MAX_POSTS);
-        }
-
-        $cacheMinutes = self::parseInt(
-            $raw[Setting::CacheTtl->value] ?? '',
-            FeedConfig::MIN_CACHE_MINUTES,
-            FeedConfig::MAX_CACHE_MINUTES,
-            FeedConfig::DEFAULT_CACHE_MINUTES
+        $cacheMinutes = self::parseNumber(
+            $raw,
+            Setting::CacheTtl,
+            [FeedConfig::MIN_CACHE_MINUTES, FeedConfig::MAX_CACHE_MINUTES, FeedConfig::DEFAULT_CACHE_MINUTES],
+            $errors
         );
-        if ($cacheMinutes === null) {
-            $errors[Setting::CacheTtl->value] = self::rangeError(FeedConfig::MIN_CACHE_MINUTES, FeedConfig::MAX_CACHE_MINUTES);
-        }
 
         $network = self::text($raw[Setting::Network->value] ?? '');
         $source = match ($network) {
@@ -161,6 +154,25 @@ final class FeedSettings
         }
 
         return $isValid ? ['source' => $source, 'target' => $target, 'instance' => null] : self::fail(Setting::BlueskyActor, $errors);
+    }
+
+    /**
+     * Reads a whole number setting, recording a range error when it is not valid.
+     *
+     * @param array<string, mixed> $raw
+     * @param array{0: int, 1: int, 2: int} $limits minimum, maximum and the default used when the setting is empty
+     * @param array<string, array{key: string, params: array<string, int>}> $errors
+     */
+    private static function parseNumber(array $raw, Setting $setting, array $limits, array &$errors): ?int
+    {
+        [$min, $max, $default] = $limits;
+        $number = self::parseInt($raw[$setting->value] ?? '', $min, $max, $default);
+
+        if ($number === null) {
+            $errors[$setting->value] = self::rangeError($min, $max);
+        }
+
+        return $number;
     }
 
     /** An empty value means "use the default"; anything else must be a whole number in range. */
