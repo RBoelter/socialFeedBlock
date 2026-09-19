@@ -190,10 +190,12 @@ describe('Social Feed Block plugin tests', function () {
         cy.get(form + ' button[id^="submitFormButton"]').click();
         cy.waitJQuery();
 
+        // The wording of the error messages differs from the help texts under the fields
+        // ("Enter ..." vs "The server's host name ..."), so this does not pass on help texts alone.
         cy.get(form).should('be.visible')
-            .and('contain.text', 'host name')
-            .and('contain.text', 'without the server part')
-            .and('contain.text', 'whole number from 1 to 20');
+            .and('contain.text', 'Enter the server\'s host name')
+            .and('contain.text', 'Enter an account name without the server part')
+            .and('contain.text', 'Enter a whole number from 1 to 20');
 
         openBlockSettings();
         cy.get(form + ' input[name="mastodonInstance"]').should('have.value', 'mastodon.social');
@@ -222,7 +224,7 @@ describe('Social Feed Block plugin tests', function () {
             }).then(response => {
                 // a failed validation redisplays the form: HTML with the error, and the setting stays put
                 expect(response.status).to.eq(200);
-                expect(response.body.content).to.contain('host name');
+                expect(response.body.content).to.contain('Enter the server\'s host name');
             });
         });
 
