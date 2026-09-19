@@ -57,7 +57,7 @@
         </div>
 
         {fbvFormSection title="plugins.blocks.socialFeed.settings.postCount"}
-            {fbvElement type="text" id="postCount" value=$postCount label=$postCountHelp translate=false size=$fbvStyles.size.SMALL}
+            {fbvElement type="text" id="postCount" value=$postCount label=$postCountHelp subLabelTranslate=false size=$fbvStyles.size.SMALL}
         {/fbvFormSection}
 
         {fbvFormSection list=true}
@@ -66,7 +66,7 @@
         {/fbvFormSection}
 
         {fbvFormSection title="plugins.blocks.socialFeed.settings.cacheTtl"}
-            {fbvElement type="text" id="cacheTtl" value=$cacheTtl label=$cacheTtlHelp translate=false size=$fbvStyles.size.SMALL}
+            {fbvElement type="text" id="cacheTtl" value=$cacheTtl label=$cacheTtlHelp subLabelTranslate=false size=$fbvStyles.size.SMALL}
         {/fbvFormSection}
     {/fbvFormArea}
     {fbvFormButtons submitText="common.save"}

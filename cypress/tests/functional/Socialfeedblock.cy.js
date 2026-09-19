@@ -147,6 +147,11 @@ describe('Social Feed Block plugin tests', function () {
         save();
 
         openBlockSettings();
+        // Regression test: help texts that were already translated were looked up as keys again
+        // and showed up as ##text##.
+        cy.get(form).invoke('text').should('not.contain', '##');
+        cy.contains(form + ' label.sub_label', 'A whole number from 1 to 20.');
+        cy.contains(form + ' label.sub_label', 'A whole number from 5 to 1440.');
         cy.get(form + ' input[name="postCount"]').should('have.value', '5');
         cy.get(form + ' input[name="cacheTtl"]').should('have.value', '15');
         cy.get(form + ' input[name="mastodonInstance"]').should('have.value', 'mastodon.social');
@@ -196,6 +201,8 @@ describe('Social Feed Block plugin tests', function () {
             .and('contain.text', 'Enter the server\'s host name')
             .and('contain.text', 'Enter an account name without the server part')
             .and('contain.text', 'Enter a whole number from 1 to 20');
+        // every invalid field is marked, not only the first one
+        cy.get(form + ' label.sub_label.error').should('have.length', 3);
 
         openBlockSettings();
         cy.get(form + ' input[name="mastodonInstance"]').should('have.value', 'mastodon.social');
@@ -224,7 +231,8 @@ describe('Social Feed Block plugin tests', function () {
             }).then(response => {
                 // a failed validation redisplays the form: HTML with the error, and the setting stays put
                 expect(response.status).to.eq(200);
-                expect(response.body.content).to.contain('Enter the server\'s host name');
+                // the body is HTML, so the apostrophe of the message is an entity
+                expect(response.body.content).to.contain('host name, such as mastodon.social');
             });
         });
 
