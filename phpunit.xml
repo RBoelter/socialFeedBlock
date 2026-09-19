@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="tests/bootstrap.php"
+    cacheDirectory=".phpunit.cache"
+    colors="true"
+    failOnWarning="true"
+    failOnRisky="true"
+>
+    <testsuites>
+        <testsuite name="socialFeedBlock">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>classes</directory>
+        </include>
+    </source>
+</phpunit>
