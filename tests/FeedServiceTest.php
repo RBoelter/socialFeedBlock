@@ -13,6 +13,7 @@ use Illuminate\Cache\ArrayStore;
 use Illuminate\Cache\Repository;
 use Illuminate\Support\Carbon;
 use LogicException;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
@@ -80,17 +81,27 @@ final class FeedServiceTest extends TestCase
         self::assertSame(1, $this->provider->calls);
     }
 
+    /** @return iterable<string, array{0: int}> */
+    public static function cacheLifetimes(): iterable
+    {
+        yield 'the shortest allowed' => [5];
+        yield 'the default' => [15];
+        yield 'an hour' => [60];
+        yield 'the longest allowed' => [1440];
+    }
+
     #[Test]
-    public function theCacheLivesForTheConfiguredTime(): void
+    #[DataProvider('cacheLifetimes')]
+    public function theCacheLivesForTheConfiguredTime(int $minutes): void
     {
         $this->provider->answers = [[FakeProvider::post('first')], [FakeProvider::post('second')]];
-        $this->service->getPosts($this->config(cacheMinutes: 15));
+        $this->service->getPosts($this->config(cacheMinutes: $minutes));
 
-        $this->later(14);
-        self::assertSame(['first'], self::names($this->service->getPosts($this->config(cacheMinutes: 15))));
+        $this->later($minutes - 1);
+        self::assertSame(['first'], self::names($this->service->getPosts($this->config(cacheMinutes: $minutes))));
 
-        $this->later(16);
-        self::assertSame(['second'], self::names($this->service->getPosts($this->config(cacheMinutes: 15))));
+        $this->later($minutes + 1);
+        self::assertSame(['second'], self::names($this->service->getPosts($this->config(cacheMinutes: $minutes))));
         self::assertSame(2, $this->provider->calls);
     }
 
