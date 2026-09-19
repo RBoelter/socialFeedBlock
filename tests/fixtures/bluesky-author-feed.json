@@ -1,0 +1,357 @@
+{
+    "cursor": "2026-09-11T08:00:00.000Z",
+    "feed": [
+        {
+            "post": {
+                "uri": "at://did:plc:journal123/app.bsky.feed.post/r1",
+                "cid": "bafyreir1",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-18T21:32:30.367Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "Grüße 👋 Read our new issue at journal.example/issue/42 with @editor.example.com #openaccess",
+                    "facets": [
+                        {
+                            "index": {
+                                "byteStart": 35,
+                                "byteEnd": 59
+                            },
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#link",
+                                    "uri": "https://journal.example/issue/42"
+                                }
+                            ]
+                        },
+                        {
+                            "index": {
+                                "byteStart": 65,
+                                "byteEnd": 84
+                            },
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#mention",
+                                    "did": "did:plc:editor789"
+                                }
+                            ]
+                        },
+                        {
+                            "index": {
+                                "byteStart": 85,
+                                "byteEnd": 96
+                            },
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#tag",
+                                    "tag": "openaccess"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "replyCount": 2,
+                "repostCount": 3,
+                "likeCount": 10,
+                "indexedAt": "2026-09-18T21:32:30.367Z",
+                "labels": []
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:reviewer456/app.bsky.feed.post/rrev",
+                "cid": "bafyreirrev",
+                "author": {
+                    "did": "did:plc:reviewer456",
+                    "handle": "reviewer.example.org",
+                    "displayName": "A Reviewer",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:reviewer456/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-17T08:15:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "Peer review is work worth crediting"
+                },
+                "replyCount": 1,
+                "repostCount": 7,
+                "likeCount": 21,
+                "indexedAt": "2026-09-17T08:15:00.000Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "indexedAt": "2026-09-18T20:00:00.000Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:journal123/app.bsky.feed.post/r3",
+                "cid": "bafyreir3",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-16T12:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "@reader thanks for the question, see the FAQ."
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 1,
+                "indexedAt": "2026-09-16T12:00:00.000Z",
+                "labels": []
+            },
+            "reply": {
+                "root": {
+                    "uri": "at://did:plc:reader/app.bsky.feed.post/q1"
+                },
+                "parent": {
+                    "uri": "at://did:plc:reader/app.bsky.feed.post/q1"
+                }
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:journal123/app.bsky.feed.post/r4",
+                "cid": "bafyreir4",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-15T09:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "Photos from the workshop"
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 4,
+                "indexedAt": "2026-09-15T09:00:00.000Z",
+                "labels": [],
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:journal123/x@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:journal123/x@jpeg",
+                            "alt": "A workshop"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:journal123/app.bsky.feed.post/r5",
+                "cid": "bafyreir5",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-14T10:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "A post labelled as adult content"
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 0,
+                "indexedAt": "2026-09-14T10:00:00.000Z",
+                "labels": [
+                    {
+                        "val": "porn",
+                        "src": "did:plc:labeler"
+                    }
+                ]
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:reviewer456/app.bsky.feed.post/r6",
+                "cid": "bafyreir6",
+                "author": {
+                    "did": "did:plc:reviewer456",
+                    "handle": "private.example.org",
+                    "displayName": "A Reviewer",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:reviewer456/a@jpeg",
+                    "labels": [
+                        {
+                            "val": "!no-unauthenticated",
+                            "src": "did:plc:reviewer456"
+                        }
+                    ]
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-14T09:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "An account that asked not to be shown to logged-out visitors"
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 0,
+                "indexedAt": "2026-09-14T09:00:00.000Z",
+                "labels": []
+            }
+        },
+        {
+            "post": {
+                "cid": "bafyreimalformed",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "text": "no uri, must be skipped",
+                    "createdAt": "2026-09-13T09:00:00.000Z"
+                }
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:journal123/app.bsky.feed.post/r8",
+                "cid": "bafyreir8",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-13T08:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "Hello <script>alert(1)</script> & \"quotes\" click here",
+                    "facets": [
+                        {
+                            "index": {
+                                "byteStart": 43,
+                                "byteEnd": 53
+                            },
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#link",
+                                    "uri": "javascript:alert(2)"
+                                }
+                            ]
+                        },
+                        {
+                            "index": {
+                                "byteStart": 500,
+                                "byteEnd": 510
+                            },
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#link",
+                                    "uri": "https://example.org/out-of-range"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 0,
+                "indexedAt": "2026-09-13T08:00:00.000Z",
+                "labels": []
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:gone999/app.bsky.feed.post/r9",
+                "cid": "bafyreir9",
+                "author": {
+                    "did": "did:plc:gone999",
+                    "handle": "handle.invalid",
+                    "displayName": "Moved Account",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-12T08:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "Handle no longer resolves"
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 0,
+                "indexedAt": "2026-09-12T08:00:00.000Z",
+                "labels": []
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:journal123/app.bsky.feed.post/r10",
+                "cid": "bafyreir10",
+                "author": {
+                    "did": "did:plc:journal123",
+                    "handle": "journal.example.com",
+                    "displayName": "Example Journal",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:journal123/a@jpeg",
+                    "labels": []
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2026-09-11T08:00:00.000Z",
+                    "langs": [
+                        "en"
+                    ],
+                    "text": "The oldest post"
+                },
+                "replyCount": 0,
+                "repostCount": 0,
+                "likeCount": 0,
+                "indexedAt": "2026-09-11T08:00:00.000Z",
+                "labels": []
+            }
+        }
+    ]
+}
