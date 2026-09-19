@@ -1,0 +1,180 @@
+[
+    {
+        "id": "1001",
+        "created_at": "2026-09-18T21:32:30.367Z",
+        "in_reply_to_id": null,
+        "spoiler_text": "",
+        "url": "https://mastodon.example/@examplejournal/1001",
+        "replies_count": 2,
+        "reblogs_count": 3,
+        "favourites_count": 10,
+        "content": "<p>New issue is out: <a href=\"https://journal.example/issue/42\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">journal.example/issue/42</span><span class=\"invisible\"></span></a> <a href=\"https://mastodon.example/tags/openaccess\" class=\"mention hashtag\" rel=\"tag\">#<span>openaccess</span></a> thanks <span class=\"h-card\"><a href=\"https://mastodon.example/@editor\" class=\"u-url mention\">@<span>editor</span></a></span></p>",
+        "reblog": null,
+        "account": {
+            "id": "109",
+            "username": "examplejournal",
+            "acct": "examplejournal",
+            "display_name": "Example Journal",
+            "url": "https://mastodon.example/@examplejournal",
+            "avatar": "https://files.mastodon.example/avatars/109.png",
+            "emojis": []
+        },
+        "media_attachments": [
+            {"id": "5", "type": "image", "url": "https://files.mastodon.example/media/5.png"}
+        ],
+        "emojis": []
+    },
+    {
+        "id": "1002",
+        "created_at": "2026-09-18T20:00:00.000Z",
+        "in_reply_to_id": null,
+        "spoiler_text": "",
+        "url": "https://mastodon.example/@examplejournal/1002/activity",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 0,
+        "content": "",
+        "account": {
+            "id": "109",
+            "username": "examplejournal",
+            "acct": "examplejournal",
+            "display_name": "Example Journal",
+            "url": "https://mastodon.example/@examplejournal",
+            "emojis": []
+        },
+        "media_attachments": [],
+        "emojis": [],
+        "reblog": {
+            "id": "555",
+            "created_at": "2026-09-17T08:15:00.000Z",
+            "in_reply_to_id": null,
+            "spoiler_text": "",
+            "url": "https://other.example/@reviewer/555",
+            "replies_count": 1,
+            "reblogs_count": 7,
+            "favourites_count": 21,
+            "content": "<p>Reviewing is work :verified: worth crediting</p>",
+            "account": {
+                "id": "77",
+                "username": "reviewer",
+                "acct": "reviewer@other.example",
+                "display_name": "A Reviewer :verified:",
+                "url": "https://other.example/@reviewer",
+                "emojis": [{"shortcode": "verified", "url": "https://files.other.example/emoji/verified.png"}]
+            },
+            "media_attachments": [],
+            "emojis": [{"shortcode": "verified", "url": "https://files.other.example/emoji/verified.png"}]
+        }
+    },
+    {
+        "id": "1003",
+        "created_at": "2026-09-16T12:00:00.000Z",
+        "in_reply_to_id": "1000",
+        "spoiler_text": "",
+        "url": "https://mastodon.example/@examplejournal/1003",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 1,
+        "content": "<p>@reader thanks for the question, see the FAQ.</p>",
+        "reblog": null,
+        "account": {
+            "id": "109",
+            "username": "examplejournal",
+            "acct": "examplejournal",
+            "display_name": "Example Journal",
+            "url": "https://mastodon.example/@examplejournal",
+            "emojis": []
+        },
+        "media_attachments": [],
+        "emojis": []
+    },
+    {
+        "id": "1004",
+        "created_at": "2026-09-15T09:00:00.000Z",
+        "in_reply_to_id": null,
+        "spoiler_text": "Politics",
+        "url": "https://mastodon.example/@examplejournal/1004",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 0,
+        "content": "<p>This text is hidden behind a content warning.</p>",
+        "reblog": null,
+        "account": {
+            "id": "109",
+            "username": "examplejournal",
+            "acct": "examplejournal",
+            "display_name": "Example Journal",
+            "url": "https://mastodon.example/@examplejournal",
+            "emojis": []
+        },
+        "media_attachments": [],
+        "emojis": []
+    },
+    {
+        "id": "1005",
+        "created_at": "2026-09-14T09:00:00.000Z",
+        "in_reply_to_id": null,
+        "spoiler_text": "",
+        "url": "https://mastodon.example/@examplejournal/1005",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 0,
+        "content": "<p onclick=\"steal()\">Hello<script>alert(1)</script><img src=\"https://tracker.example/pixel.gif\"><a href=\"javascript:alert(2)\">click</a><iframe src=\"https://evil.example\"></iframe></p>",
+        "reblog": null,
+        "account": {
+            "id": "109",
+            "username": "examplejournal",
+            "acct": "examplejournal",
+            "display_name": "",
+            "url": "https://mastodon.example/@examplejournal",
+            "emojis": []
+        },
+        "media_attachments": [],
+        "emojis": []
+    },
+    {
+        "id": "1006",
+        "created_at": "2026-09-13T09:00:00.000Z",
+        "in_reply_to_id": null,
+        "spoiler_text": "",
+        "content": "<p>This status has no url and must be skipped.</p>",
+        "reblog": null,
+        "account": {"id": "109", "username": "examplejournal", "acct": "examplejournal", "display_name": "Example Journal", "emojis": []},
+        "media_attachments": [],
+        "emojis": []
+    },
+    {
+        "id": "1007",
+        "created_at": "not a date",
+        "in_reply_to_id": null,
+        "spoiler_text": "",
+        "url": "https://mastodon.example/@examplejournal/1007",
+        "content": "<p>This status has an unusable date and must be skipped.</p>",
+        "reblog": null,
+        "account": {"id": "109", "username": "examplejournal", "acct": "examplejournal", "display_name": "Example Journal", "emojis": []},
+        "media_attachments": [],
+        "emojis": []
+    },
+    {
+        "id": "1008",
+        "created_at": "2026-09-12T09:00:00.000Z",
+        "in_reply_to_id": null,
+        "spoiler_text": "",
+        "url": "https://mastodon.example/@examplejournal/1008",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 0,
+        "content": "<p>The oldest post.</p>",
+        "reblog": null,
+        "account": {
+            "id": "109",
+            "username": "examplejournal",
+            "acct": "examplejournal",
+            "display_name": "Example Journal",
+            "url": "https://mastodon.example/@examplejournal",
+            "emojis": []
+        },
+        "media_attachments": [],
+        "emojis": []
+    }
+]
