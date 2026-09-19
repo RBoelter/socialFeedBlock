@@ -1,6 +1,5 @@
 # CI for OJS 3.5. It runs once per pull request and not on every push: one run per change is
 # enough, and every run installs a full OJS in four PHP/database combinations.
-# (`pkp plugin ci` would restore the push trigger of the shared template.)
 on:
   pull_request:
 name: CI (OJS 3.5)

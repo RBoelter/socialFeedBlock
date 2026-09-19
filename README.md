@@ -86,8 +86,6 @@ cd plugins/blocks/socialFeedBlock && php ../../../lib/pkp/lib/vendor/bin/phpunit
 npx cypress run --config specPattern="plugins/blocks/socialFeedBlock/cypress/tests/functional/*.cy.js"
 ```
 
-The setup used to develop it is [pkp-dev-env](https://github.com/RBoelter/pkp-dev-env).
-
 ## License
 
 GPL-3.0, see `LICENSE`.
