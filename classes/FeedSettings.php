@@ -108,9 +108,12 @@ final class FeedSettings
      */
     private static function parseMastodon(array $raw, array &$errors): ?array
     {
+        $failed = false;
+
         $instance = strtolower(self::text($raw[Setting::MastodonInstance->value] ?? ''));
         if (preg_match(self::HOST_PATTERN, $instance) !== 1) {
-            return self::fail(Setting::MastodonInstance, $errors);
+            self::fail(Setting::MastodonInstance, $errors);
+            $failed = true;
         }
 
         $source = self::text($raw[Setting::MastodonSource->value] ?? '');
@@ -118,19 +121,21 @@ final class FeedSettings
 
         if ($source === FeedConfig::SOURCE_ACCOUNT) {
             $target = ltrim($handle, '@');
-            $valid = preg_match(self::MASTODON_ACCOUNT_PATTERN, $target) === 1;
+            $targetIsValid = preg_match(self::MASTODON_ACCOUNT_PATTERN, $target) === 1;
         } elseif ($source === FeedConfig::SOURCE_HASHTAG) {
             $target = ltrim($handle, '#');
-            $valid = preg_match(self::HASHTAG_PATTERN, $target) === 1;
+            $targetIsValid = preg_match(self::HASHTAG_PATTERN, $target) === 1;
         } else {
+            // Without a known source there is no rule to judge the account or hashtag by
             return self::fail(Setting::MastodonSource, $errors);
         }
 
-        if (!$valid) {
-            return self::fail(Setting::MastodonHandle, $errors);
+        if (!$targetIsValid) {
+            self::fail(Setting::MastodonHandle, $errors);
+            $failed = true;
         }
 
-        return ['source' => $source, 'target' => $target, 'instance' => $instance];
+        return $failed ? null : ['source' => $source, 'target' => $target, 'instance' => $instance];
     }
 
     /**
@@ -146,19 +151,16 @@ final class FeedSettings
 
         if ($source === FeedConfig::SOURCE_AUTHOR) {
             $target = ltrim($actor, '@');
-            $valid = preg_match(self::BLUESKY_HANDLE_PATTERN, $target) === 1 || preg_match(self::DID_PATTERN, $target) === 1;
+            $isValid = preg_match(self::BLUESKY_HANDLE_PATTERN, $target) === 1 || preg_match(self::DID_PATTERN, $target) === 1;
         } elseif ($source === FeedConfig::SOURCE_FEED) {
             $target = $actor;
-            $valid = preg_match(self::BLUESKY_FEED_PATTERN, $target) === 1;
+            $isValid = preg_match(self::BLUESKY_FEED_PATTERN, $target) === 1;
         } else {
+            // Without a known source there is no rule to judge the account or feed by
             return self::fail(Setting::BlueskySource, $errors);
         }
 
-        if (!$valid) {
-            return self::fail(Setting::BlueskyActor, $errors);
-        }
-
-        return ['source' => $source, 'target' => $target, 'instance' => null];
+        return $isValid ? ['source' => $source, 'target' => $target, 'instance' => null] : self::fail(Setting::BlueskyActor, $errors);
     }
 
     /** An empty value means "use the default"; anything else must be a whole number in range. */

@@ -209,6 +209,18 @@ final class FeedSettingsTest extends TestCase
             yield "cache lifetime {$minutes}" => [['cacheTtl' => $minutes] + $bluesky, ['cacheTtl']];
         }
 
+        yield 'mastodon: a bad host and a bad handle are both reported at once' => [
+            ['mastodonInstance' => 'https://evil.example/x', 'mastodonHandle' => 'user@other.social'] + $mastodon,
+            ['mastodonInstance', 'mastodonHandle'],
+        ];
+        yield 'mastodon: an unknown source is reported, the handle cannot be judged without it' => [
+            ['mastodonSource' => 'list', 'mastodonHandle' => 'a@b'] + $mastodon,
+            ['mastodonSource'],
+        ];
+        yield 'bluesky: an unknown source is reported, the actor cannot be judged without it' => [
+            ['blueskySource' => 'search', 'blueskyActor' => 'not valid'] + $bluesky,
+            ['blueskySource'],
+        ];
         yield 'several errors are all reported' => [
             ['mastodonHandle' => 'a@b', 'postCount' => '0', 'cacheTtl' => '1'] + $mastodon,
             ['mastodonHandle', 'postCount', 'cacheTtl'],
