@@ -39,18 +39,11 @@ final class MastodonProvider implements FeedProvider
                 'exclude_reblogs' => $config->excludeReposts ? 'true' : 'false',
             ]);
 
-        $posts = [];
-        foreach ($statuses as $status) {
-            $post = is_array($status) && $this->isWanted($status, $config) ? $this->toPost($status) : null;
-            if ($post !== null) {
-                $posts[] = $post;
-            }
-            if (count($posts) === $config->postCount) {
-                break;
-            }
-        }
-
-        return $posts;
+        return PostList::collect(
+            $statuses,
+            fn (mixed $status): ?Post => is_array($status) && $this->isWanted($status, $config) ? $this->toPost($status) : null,
+            $config->postCount
+        );
     }
 
     /** @throws FeedException */
