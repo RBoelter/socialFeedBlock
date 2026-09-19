@@ -1,0 +1,63 @@
+/* Social Feed Block. Colours are inherited from the theme, only structure is set here. */
+
+.block_socialFeed .socialFeed_posts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.block_socialFeed .socialFeed_post {
+    padding: 0.75em 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    overflow-wrap: anywhere;
+}
+
+.block_socialFeed .socialFeed_post:first-child {
+    padding-top: 0;
+}
+
+.block_socialFeed .socialFeed_post p {
+    margin: 0 0 0.35em;
+}
+
+.block_socialFeed .socialFeed_repost,
+.block_socialFeed .socialFeed_handle,
+.block_socialFeed .socialFeed_meta,
+.block_socialFeed .socialFeed_stats {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.block_socialFeed .socialFeed_handle {
+    margin-left: 0.25em;
+}
+
+.block_socialFeed .socialFeed_warning {
+    font-style: italic;
+}
+
+.block_socialFeed .socialFeed_body p:last-child {
+    margin-bottom: 0;
+}
+
+.block_socialFeed .socialFeed_stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.block_socialFeed .socialFeed_more {
+    margin: 0.75em 0 0;
+}
+
+/* Mastodon shortens long addresses: the start and end are hidden, the middle gets an ellipsis */
+.block_socialFeed .invisible {
+    display: none;
+}
+
+.block_socialFeed .ellipsis::after {
+    content: "…";
+}
