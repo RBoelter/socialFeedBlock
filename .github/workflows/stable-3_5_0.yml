@@ -1,6 +1,8 @@
-# Copy into a plugin repo's .github/workflows/ on the stable-3_5_0 branch.
-# Generic - see stable-3_4_0.yml for notes; only php/node/branch differ.
-on: [push, pull_request]
+# CI for OJS 3.5. It runs once per pull request and not on every push: one run per change is
+# enough, and every run installs a full OJS in four PHP/database combinations.
+# (`pkp plugin ci` would restore the push trigger of the shared template.)
+on:
+  pull_request:
 name: CI (OJS 3.5)
 jobs:
   test:
