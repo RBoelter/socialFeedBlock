@@ -1,5 +1,21 @@
+# editors and operating systems
 .idea
 .vscode
 .DS_Store
+Thumbs.db
+*.swp
+
+# tool caches
 .php-cs-fixer.cache
 .phpunit.cache
+.phpunit.result.cache
+
+# dependencies and build output, should someone install or build in the plugin directory
+node_modules/
+/vendor/
+/dist/
+
+# Cypress output when the suite is run from the plugin directory
+cypress/logs/
+cypress/screenshots/
+cypress/videos/
