@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: socialFeedBlock\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.blocks.socialFeed.title"
+msgstr "Bloc de flux social"
+
+msgid "plugins.blocks.socialFeed.desc"
+msgstr "Affiche les derniers messages d'un compte Mastodon ou Bluesky dans la barre latérale. Votre serveur récupère les messages, si bien que les navigateurs de vos visiteurs ne contactent jamais le réseau social."
+
+msgid "plugins.blocks.socialFeed.defaultTitle"
+msgstr "Derniers messages"
+
+msgid "plugins.blocks.socialFeed.settings.privacy"
+msgstr "Les messages sont récupérés et mis en cache par votre serveur. Les navigateurs de vos visiteurs ne se connectent pas au réseau social et aucun cookie n'est déposé."
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle"
+msgstr "Titre du bloc"
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle.desc"
+msgstr "Laissez vide pour utiliser « Derniers messages »."
+
+msgid "plugins.blocks.socialFeed.settings.network"
+msgstr "Réseau"
+
+msgid "plugins.blocks.socialFeed.network.mastodon"
+msgstr "Mastodon"
+
+msgid "plugins.blocks.socialFeed.network.bluesky"
+msgstr "Bluesky"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance"
+msgstr "Serveur Mastodon"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance.desc"
+msgstr "Le nom d'hôte du serveur, par exemple mastodon.social (sans https://)."
+
+msgid "plugins.blocks.socialFeed.settings.mastodonSource"
+msgstr "Afficher"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle"
+msgstr "Compte ou hashtag"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle.desc"
+msgstr "Un nom de compte sur ce serveur sans la partie serveur (par exemple PublicKnowledgeProject) ou un hashtag sans #."
+
+msgid "plugins.blocks.socialFeed.settings.blueskySource"
+msgstr "Afficher"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor"
+msgstr "Compte ou flux"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor.desc"
+msgstr "Pour un compte : son identifiant (par exemple pkp.sfu.ca) ou son DID. Pour un flux personnalisé : l'adresse at:// du flux, qui contient le DID de son créateur. Les recherches par hashtag ne sont pas disponibles sur Bluesky."
+
+msgid "plugins.blocks.socialFeed.source.account"
+msgstr "Messages d'un compte"
+
+msgid "plugins.blocks.socialFeed.source.hashtag"
+msgstr "Messages publics avec un hashtag"
+
+msgid "plugins.blocks.socialFeed.source.author"
+msgstr "Messages d'un compte"
+
+msgid "plugins.blocks.socialFeed.source.feed"
+msgstr "Un flux personnalisé"
+
+msgid "plugins.blocks.socialFeed.settings.postCount"
+msgstr "Nombre de messages"
+
+msgid "plugins.blocks.socialFeed.settings.postCount.desc"
+msgstr "Un nombre entier de {$min} à {$max}."
+
+msgid "plugins.blocks.socialFeed.settings.excludeReplies"
+msgstr "Masquer les réponses"
+
+msgid "plugins.blocks.socialFeed.settings.excludeReposts"
+msgstr "Masquer les reposts et les partages"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl"
+msgstr "Intervalle d'actualisation (minutes)"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl.desc"
+msgstr "Durée de conservation des messages récupérés avant d'interroger de nouveau le réseau. Un nombre entier de {$min} à {$max}."
+
+msgid "plugins.blocks.socialFeed.validation.network"
+msgstr "Choisissez un réseau."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonInstance"
+msgstr "Saisissez le nom d'hôte du serveur, comme mastodon.social, sans https:// ni chemin."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonSource"
+msgstr "Choisissez ce qu'il faut afficher."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonHandle"
+msgstr "Saisissez un nom de compte sans la partie serveur, ou un hashtag sans #. Les espaces et les caractères spéciaux ne sont pas autorisés."
+
+msgid "plugins.blocks.socialFeed.validation.blueskySource"
+msgstr "Choisissez ce qu'il faut afficher."
+
+msgid "plugins.blocks.socialFeed.validation.blueskyActor"
+msgstr "Saisissez un identifiant comme nom.bsky.social ou un DID pour un compte, ou l'adresse at:// d'un flux (avec le DID de son créateur)."
+
+msgid "plugins.blocks.socialFeed.validation.range"
+msgstr "Saisissez un nombre entier de {$min} à {$max}."
+
+msgid "plugins.blocks.socialFeed.error.unreachable"
+msgstr "Le serveur n'a pas pu être joint."
+
+msgid "plugins.blocks.socialFeed.error.authRequired"
+msgstr "Le serveur n'autorise pas l'accès public à ses messages."
+
+msgid "plugins.blocks.socialFeed.error.notFound"
+msgstr "Le compte, le hashtag ou le flux est introuvable."
+
+msgid "plugins.blocks.socialFeed.error.rateLimited"
+msgstr "Le serveur limite les requêtes. Réessayez plus tard."
+
+msgid "plugins.blocks.socialFeed.error.serverError"
+msgstr "Le serveur a signalé une erreur."
+
+msgid "plugins.blocks.socialFeed.error.invalidResponse"
+msgstr "Le serveur a envoyé une réponse inutilisable."
+
+msgid "plugins.blocks.socialFeed.saved.warning"
+msgstr "Les paramètres ont été enregistrés, mais les messages n'ont pas pu être chargés : {$reason}"
+
+msgid "plugins.blocks.socialFeed.repostedBy"
+msgstr "Reposté par {$name}"
+
+msgid "plugins.blocks.socialFeed.hasMedia"
+msgstr "Ce message contient des images ou une vidéo. Voir l'original."
+
+msgid "plugins.blocks.socialFeed.replies"
+msgstr "Réponses : {$number}"
+
+msgid "plugins.blocks.socialFeed.reposts"
+msgstr "Reposts : {$number}"
+
+msgid "plugins.blocks.socialFeed.likes"
+msgstr "J'aime : {$number}"
+
+msgid "plugins.blocks.socialFeed.more"
+msgstr "Plus de messages"

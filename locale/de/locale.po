@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: socialFeedBlock\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.blocks.socialFeed.title"
+msgstr "Social-Feed-Block"
+
+msgid "plugins.blocks.socialFeed.desc"
+msgstr "Zeigt die neuesten Beiträge eines Mastodon- oder Bluesky-Kontos in der Seitenleiste. Ihr Server ruft die Beiträge ab, daher nehmen die Browser Ihrer Besucher nie Kontakt zum sozialen Netzwerk auf."
+
+msgid "plugins.blocks.socialFeed.defaultTitle"
+msgstr "Neueste Beiträge"
+
+msgid "plugins.blocks.socialFeed.settings.privacy"
+msgstr "Die Beiträge werden von Ihrem Server abgerufen und zwischengespeichert. Die Browser Ihrer Besucher verbinden sich nicht mit dem sozialen Netzwerk, und es werden keine Cookies gesetzt."
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle"
+msgstr "Titel des Blocks"
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle.desc"
+msgstr "Leer lassen, um „Neueste Beiträge“ zu verwenden."
+
+msgid "plugins.blocks.socialFeed.settings.network"
+msgstr "Netzwerk"
+
+msgid "plugins.blocks.socialFeed.network.mastodon"
+msgstr "Mastodon"
+
+msgid "plugins.blocks.socialFeed.network.bluesky"
+msgstr "Bluesky"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance"
+msgstr "Mastodon-Server"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance.desc"
+msgstr "Der Hostname des Servers, zum Beispiel mastodon.social (ohne https://)."
+
+msgid "plugins.blocks.socialFeed.settings.mastodonSource"
+msgstr "Anzeigen"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle"
+msgstr "Konto oder Hashtag"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle.desc"
+msgstr "Ein Kontoname auf diesem Server ohne Serverteil (zum Beispiel PublicKnowledgeProject) oder ein Hashtag ohne #."
+
+msgid "plugins.blocks.socialFeed.settings.blueskySource"
+msgstr "Anzeigen"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor"
+msgstr "Konto oder Feed"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor.desc"
+msgstr "Für ein Konto: der Handle (zum Beispiel pkp.sfu.ca) oder seine DID. Für einen eigenen Feed: die at://-Adresse des Feeds, die die DID des Erstellers enthält. Hashtag-Suchen sind auf Bluesky nicht verfügbar."
+
+msgid "plugins.blocks.socialFeed.source.account"
+msgstr "Beiträge eines Kontos"
+
+msgid "plugins.blocks.socialFeed.source.hashtag"
+msgstr "Öffentliche Beiträge mit einem Hashtag"
+
+msgid "plugins.blocks.socialFeed.source.author"
+msgstr "Beiträge eines Kontos"
+
+msgid "plugins.blocks.socialFeed.source.feed"
+msgstr "Ein eigener Feed"
+
+msgid "plugins.blocks.socialFeed.settings.postCount"
+msgstr "Anzahl der Beiträge"
+
+msgid "plugins.blocks.socialFeed.settings.postCount.desc"
+msgstr "Eine ganze Zahl von {$min} bis {$max}."
+
+msgid "plugins.blocks.socialFeed.settings.excludeReplies"
+msgstr "Antworten ausblenden"
+
+msgid "plugins.blocks.socialFeed.settings.excludeReposts"
+msgstr "Reposts und Boosts ausblenden"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl"
+msgstr "Aktualisierungsintervall (Minuten)"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl.desc"
+msgstr "Wie lange abgerufene Beiträge gespeichert werden, bevor das Netzwerk erneut gefragt wird. Eine ganze Zahl von {$min} bis {$max}."
+
+msgid "plugins.blocks.socialFeed.validation.network"
+msgstr "Wählen Sie ein Netzwerk."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonInstance"
+msgstr "Geben Sie den Hostnamen des Servers ein, etwa mastodon.social, ohne https:// und ohne Pfad."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonSource"
+msgstr "Wählen Sie, was angezeigt werden soll."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonHandle"
+msgstr "Geben Sie einen Kontonamen ohne Serverteil oder einen Hashtag ohne # ein. Leerzeichen und Sonderzeichen sind nicht erlaubt."
+
+msgid "plugins.blocks.socialFeed.validation.blueskySource"
+msgstr "Wählen Sie, was angezeigt werden soll."
+
+msgid "plugins.blocks.socialFeed.validation.blueskyActor"
+msgstr "Geben Sie für ein Konto einen Handle wie name.bsky.social oder eine DID ein, für einen Feed die at://-Adresse (mit der DID des Erstellers)."
+
+msgid "plugins.blocks.socialFeed.validation.range"
+msgstr "Geben Sie eine ganze Zahl von {$min} bis {$max} ein."
+
+msgid "plugins.blocks.socialFeed.error.unreachable"
+msgstr "Der Server konnte nicht erreicht werden."
+
+msgid "plugins.blocks.socialFeed.error.authRequired"
+msgstr "Der Server erlaubt keinen öffentlichen Zugriff auf seine Beiträge."
+
+msgid "plugins.blocks.socialFeed.error.notFound"
+msgstr "Das Konto, der Hashtag oder der Feed wurde nicht gefunden."
+
+msgid "plugins.blocks.socialFeed.error.rateLimited"
+msgstr "Der Server begrenzt die Anfragen. Versuchen Sie es später erneut."
+
+msgid "plugins.blocks.socialFeed.error.serverError"
+msgstr "Der Server meldete einen Fehler."
+
+msgid "plugins.blocks.socialFeed.error.invalidResponse"
+msgstr "Der Server hat eine unbrauchbare Antwort gesendet."
+
+msgid "plugins.blocks.socialFeed.saved.warning"
+msgstr "Die Einstellungen wurden gespeichert, aber die Beiträge konnten nicht geladen werden: {$reason}"
+
+msgid "plugins.blocks.socialFeed.repostedBy"
+msgstr "Repost von {$name}"
+
+msgid "plugins.blocks.socialFeed.hasMedia"
+msgstr "Dieser Beitrag enthält Bilder oder Videos. Zum Original."
+
+msgid "plugins.blocks.socialFeed.replies"
+msgstr "Antworten: {$number}"
+
+msgid "plugins.blocks.socialFeed.reposts"
+msgstr "Reposts: {$number}"
+
+msgid "plugins.blocks.socialFeed.likes"
+msgstr "Likes: {$number}"
+
+msgid "plugins.blocks.socialFeed.more"
+msgstr "Weitere Beiträge"

@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: socialFeedBlock\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.blocks.socialFeed.title"
+msgstr "Bloque de feed social"
+
+msgid "plugins.blocks.socialFeed.desc"
+msgstr "Muestra las últimas publicaciones de una cuenta de Mastodon o Bluesky en la barra lateral. Su servidor obtiene las publicaciones, por lo que los navegadores de sus visitantes nunca se conectan a la red social."
+
+msgid "plugins.blocks.socialFeed.defaultTitle"
+msgstr "Últimas publicaciones"
+
+msgid "plugins.blocks.socialFeed.settings.privacy"
+msgstr "Su servidor obtiene las publicaciones y las guarda en caché. Los navegadores de sus visitantes no se conectan a la red social y no se establecen cookies."
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle"
+msgstr "Título del bloque"
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle.desc"
+msgstr "Déjelo vacío para usar «Últimas publicaciones»."
+
+msgid "plugins.blocks.socialFeed.settings.network"
+msgstr "Red"
+
+msgid "plugins.blocks.socialFeed.network.mastodon"
+msgstr "Mastodon"
+
+msgid "plugins.blocks.socialFeed.network.bluesky"
+msgstr "Bluesky"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance"
+msgstr "Servidor de Mastodon"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance.desc"
+msgstr "El nombre de host del servidor, por ejemplo mastodon.social (sin https://)."
+
+msgid "plugins.blocks.socialFeed.settings.mastodonSource"
+msgstr "Mostrar"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle"
+msgstr "Cuenta o etiqueta"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle.desc"
+msgstr "Un nombre de cuenta de este servidor sin la parte del servidor (por ejemplo PublicKnowledgeProject) o una etiqueta sin #."
+
+msgid "plugins.blocks.socialFeed.settings.blueskySource"
+msgstr "Mostrar"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor"
+msgstr "Cuenta o feed"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor.desc"
+msgstr "Para una cuenta: su identificador (por ejemplo pkp.sfu.ca) o su DID. Para un feed personalizado: la dirección at:// del feed, que contiene el DID de su creador. Las búsquedas de etiquetas no están disponibles en Bluesky."
+
+msgid "plugins.blocks.socialFeed.source.account"
+msgstr "Publicaciones de una cuenta"
+
+msgid "plugins.blocks.socialFeed.source.hashtag"
+msgstr "Publicaciones públicas con una etiqueta"
+
+msgid "plugins.blocks.socialFeed.source.author"
+msgstr "Publicaciones de una cuenta"
+
+msgid "plugins.blocks.socialFeed.source.feed"
+msgstr "Un feed personalizado"
+
+msgid "plugins.blocks.socialFeed.settings.postCount"
+msgstr "Número de publicaciones"
+
+msgid "plugins.blocks.socialFeed.settings.postCount.desc"
+msgstr "Un número entero de {$min} a {$max}."
+
+msgid "plugins.blocks.socialFeed.settings.excludeReplies"
+msgstr "Ocultar respuestas"
+
+msgid "plugins.blocks.socialFeed.settings.excludeReposts"
+msgstr "Ocultar reposts e impulsos"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl"
+msgstr "Intervalo de actualización (minutos)"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl.desc"
+msgstr "Cuánto tiempo se conservan las publicaciones obtenidas antes de volver a consultar la red. Un número entero de {$min} a {$max}."
+
+msgid "plugins.blocks.socialFeed.validation.network"
+msgstr "Elija una red."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonInstance"
+msgstr "Introduzca el nombre de host del servidor, como mastodon.social, sin https:// ni ruta."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonSource"
+msgstr "Elija qué mostrar."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonHandle"
+msgstr "Introduzca un nombre de cuenta sin la parte del servidor, o una etiqueta sin #. No se permiten espacios ni caracteres especiales."
+
+msgid "plugins.blocks.socialFeed.validation.blueskySource"
+msgstr "Elija qué mostrar."
+
+msgid "plugins.blocks.socialFeed.validation.blueskyActor"
+msgstr "Introduzca un identificador como nombre.bsky.social o un DID para una cuenta, o la dirección at:// de un feed (con el DID de su creador)."
+
+msgid "plugins.blocks.socialFeed.validation.range"
+msgstr "Introduzca un número entero de {$min} a {$max}."
+
+msgid "plugins.blocks.socialFeed.error.unreachable"
+msgstr "No se pudo conectar con el servidor."
+
+msgid "plugins.blocks.socialFeed.error.authRequired"
+msgstr "El servidor no permite el acceso público a sus publicaciones."
+
+msgid "plugins.blocks.socialFeed.error.notFound"
+msgstr "No se encontró la cuenta, la etiqueta o el feed."
+
+msgid "plugins.blocks.socialFeed.error.rateLimited"
+msgstr "El servidor está limitando las solicitudes. Inténtelo de nuevo más tarde."
+
+msgid "plugins.blocks.socialFeed.error.serverError"
+msgstr "El servidor indicó un error."
+
+msgid "plugins.blocks.socialFeed.error.invalidResponse"
+msgstr "El servidor envió una respuesta que no se puede usar."
+
+msgid "plugins.blocks.socialFeed.saved.warning"
+msgstr "La configuración se guardó, pero no se pudieron cargar las publicaciones: {$reason}"
+
+msgid "plugins.blocks.socialFeed.repostedBy"
+msgstr "Repost de {$name}"
+
+msgid "plugins.blocks.socialFeed.hasMedia"
+msgstr "Esta publicación contiene imágenes o vídeo. Ver el original."
+
+msgid "plugins.blocks.socialFeed.replies"
+msgstr "Respuestas: {$number}"
+
+msgid "plugins.blocks.socialFeed.reposts"
+msgstr "Reposts: {$number}"
+
+msgid "plugins.blocks.socialFeed.likes"
+msgstr "Me gusta: {$number}"
+
+msgid "plugins.blocks.socialFeed.more"
+msgstr "Más publicaciones"

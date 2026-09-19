@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: socialFeedBlock\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.blocks.socialFeed.title"
+msgstr "Social Feed Block"
+
+msgid "plugins.blocks.socialFeed.desc"
+msgstr "Shows the latest posts of a Mastodon or Bluesky account in the sidebar. Your server fetches the posts, so your visitors' browsers never contact the social network."
+
+msgid "plugins.blocks.socialFeed.defaultTitle"
+msgstr "Latest posts"
+
+msgid "plugins.blocks.socialFeed.settings.privacy"
+msgstr "Posts are fetched and cached by your server. Your visitors' browsers do not connect to the social network, and no cookies are set."
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle"
+msgstr "Block title"
+
+msgid "plugins.blocks.socialFeed.settings.blockTitle.desc"
+msgstr "Leave empty to use \"Latest posts\"."
+
+msgid "plugins.blocks.socialFeed.settings.network"
+msgstr "Network"
+
+msgid "plugins.blocks.socialFeed.network.mastodon"
+msgstr "Mastodon"
+
+msgid "plugins.blocks.socialFeed.network.bluesky"
+msgstr "Bluesky"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance"
+msgstr "Mastodon server"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonInstance.desc"
+msgstr "The server's host name, for example mastodon.social (without https://)."
+
+msgid "plugins.blocks.socialFeed.settings.mastodonSource"
+msgstr "Show"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle"
+msgstr "Account or hashtag"
+
+msgid "plugins.blocks.socialFeed.settings.mastodonHandle.desc"
+msgstr "An account name on this server without the server part (for example PublicKnowledgeProject), or a hashtag without #."
+
+msgid "plugins.blocks.socialFeed.settings.blueskySource"
+msgstr "Show"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor"
+msgstr "Account or feed"
+
+msgid "plugins.blocks.socialFeed.settings.blueskyActor.desc"
+msgstr "For an account: its handle (for example pkp.sfu.ca) or its DID. For a custom feed: the feed's at:// address, which contains the DID of its creator. Hashtag searches are not available on Bluesky."
+
+msgid "plugins.blocks.socialFeed.source.account"
+msgstr "Posts of an account"
+
+msgid "plugins.blocks.socialFeed.source.hashtag"
+msgstr "Public posts with a hashtag"
+
+msgid "plugins.blocks.socialFeed.source.author"
+msgstr "Posts of an account"
+
+msgid "plugins.blocks.socialFeed.source.feed"
+msgstr "A custom feed"
+
+msgid "plugins.blocks.socialFeed.settings.postCount"
+msgstr "Number of posts"
+
+msgid "plugins.blocks.socialFeed.settings.postCount.desc"
+msgstr "A whole number from {$min} to {$max}."
+
+msgid "plugins.blocks.socialFeed.settings.excludeReplies"
+msgstr "Hide replies"
+
+msgid "plugins.blocks.socialFeed.settings.excludeReposts"
+msgstr "Hide reposts and boosts"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl"
+msgstr "Refresh interval (minutes)"
+
+msgid "plugins.blocks.socialFeed.settings.cacheTtl.desc"
+msgstr "How long fetched posts are kept before the network is asked again. A whole number from {$min} to {$max}."
+
+msgid "plugins.blocks.socialFeed.validation.network"
+msgstr "Choose a network."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonInstance"
+msgstr "Enter the server's host name, such as mastodon.social, without https:// or a path."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonSource"
+msgstr "Choose what to show."
+
+msgid "plugins.blocks.socialFeed.validation.mastodonHandle"
+msgstr "Enter an account name without the server part, or a hashtag without #. Spaces and special characters are not allowed."
+
+msgid "plugins.blocks.socialFeed.validation.blueskySource"
+msgstr "Choose what to show."
+
+msgid "plugins.blocks.socialFeed.validation.blueskyActor"
+msgstr "Enter a handle such as name.bsky.social or a DID for an account, or the at:// address of a feed (with the DID of its creator)."
+
+msgid "plugins.blocks.socialFeed.validation.range"
+msgstr "Enter a whole number from {$min} to {$max}."
+
+msgid "plugins.blocks.socialFeed.error.unreachable"
+msgstr "The server could not be reached."
+
+msgid "plugins.blocks.socialFeed.error.authRequired"
+msgstr "The server does not allow public access to its posts."
+
+msgid "plugins.blocks.socialFeed.error.notFound"
+msgstr "The account, hashtag or feed was not found."
+
+msgid "plugins.blocks.socialFeed.error.rateLimited"
+msgstr "The server is limiting requests. Try again later."
+
+msgid "plugins.blocks.socialFeed.error.serverError"
+msgstr "The server reported an error."
+
+msgid "plugins.blocks.socialFeed.error.invalidResponse"
+msgstr "The server sent an answer that cannot be used."
+
+msgid "plugins.blocks.socialFeed.saved.warning"
+msgstr "The settings were saved, but the posts could not be loaded: {$reason}"
+
+msgid "plugins.blocks.socialFeed.repostedBy"
+msgstr "Reposted by {$name}"
+
+msgid "plugins.blocks.socialFeed.hasMedia"
+msgstr "This post contains images or video. View the original."
+
+msgid "plugins.blocks.socialFeed.replies"
+msgstr "Replies: {$number}"
+
+msgid "plugins.blocks.socialFeed.reposts"
+msgstr "Reposts: {$number}"
+
+msgid "plugins.blocks.socialFeed.likes"
+msgstr "Likes: {$number}"
+
+msgid "plugins.blocks.socialFeed.more"
+msgstr "More posts"
